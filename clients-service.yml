@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8080
 spring:
   data:
     mongodb:
@@ -21,15 +21,15 @@ management:
     health:
       show-details: always
 
-resilience4j:
-  circuit breaker:
-    instances:
-      operation:
-        registerHealthIndicator: true
-        eventConsumerBufferSize: 10
-        slidingWindowType: COUNT_BASED
-        slidingWindowSize: 5
-        failureRateThreshold: 5
-        waitDurationInOpenState: 5s
-        permittedNumberOfCallsInHalfOpenState: 3
-        automaticTransitionFromOpenToHalfOpenEnabled: true
+#resilience4j:
+#  circuit breaker:
+#    instances:
+#      operation:
+#        registerHealthIndicator: true
+#        eventConsumerBufferSize: 10
+#        slidingWindowType: COUNT_BASED
+#        slidingWindowSize: 5
+#        failureRateThreshold: 5
+#        waitDurationInOpenState: 5s
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
